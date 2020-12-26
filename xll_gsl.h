@@ -5,5 +5,7 @@
 #define CATEGORY "GSL"
 
 inline const int xll_gsl_doc = xll::Documentation("GSL Library", R"(
+<p>
 GNU scientific library.
+</p>
 )");

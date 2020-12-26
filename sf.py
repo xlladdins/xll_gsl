@@ -20,7 +20,7 @@ def xll_gsl_sf_addin(ret, name, *args):
 
 	return f'''
 AddIn xai_gsl_{name}(
-	Function(xll_typ[ret], xll_gsl_sf_{name}, "GSL.SF.{name})
+	Function({xll_type[ret]}, xll_gsl_sf_{name}, "GSL.SF.{name})
 	.Args({
 		{join(',\n', namehelp)}
 	})
@@ -42,6 +42,7 @@ def xll_gsl_sf_function(ret, name, *args):
 	double result = XLL_NAN;
 
 	try {
+		result = gsl_sf_{name}({args!!!});
 	}
 	catch (const std::exception& er) {
 		XLL_ERROR(ex.what());
