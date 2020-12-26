@@ -6,13 +6,15 @@ void xll_gsl_handler(const char* reason, const char* file, int line, int gsl_err
 {
 	static char buf[1024];
 
-	sprintf_s(buf, "GSL error[%d]: file: %s line: %d reason: %s", gsl_errno, file, line, reason);
+	sprintf_s(buf, "GSL error: %d\nfile: %s\nline: %d\nreason: %s", gsl_errno, file, line, reason);
 
 	throw std::runtime_error(buf);
 }
 int handler = [](){ gsl_set_error_handler(xll_gsl_handler); return 0; }();
 
 using namespace xll;
+
+
 
 #ifdef _DEBUG
 #include <cassert>
