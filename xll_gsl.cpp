@@ -14,8 +14,6 @@ int handler = [](){ gsl_set_error_handler(xll_gsl_handler); return 0; }();
 
 using namespace xll;
 
-
-
 #ifdef _DEBUG
 #include <cassert>
 #include <gsl/gsl_sf_exp.h>
