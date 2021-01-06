@@ -6,6 +6,6 @@
 
 inline const int xll_gsl_doc = xll::Documentation("GSL Library", R"(
 <p>
-GNU scientific library.
+The GNU scientific library.
 </p>
 )");
