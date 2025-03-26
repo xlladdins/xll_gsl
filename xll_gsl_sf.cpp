@@ -39,7 +39,7 @@ _FPX*  WINAPI xll_sf_airy_Ai(double x, gsl_mode_t mode)
 	return &result;
 }
 
-
+c
 AddIn xai_gsl_sf_beta(
 	Function(XLL_DOUBLE, "xll_gsl_sf_beta", "GSL.SF.BETA")
 	.Args({
